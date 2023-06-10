@@ -42,4 +42,8 @@ const addItem = () => {
   </div>
 </template>
 
-<style></style>
+<style>
+.over500 {
+  color: red;
+}
+</style>
