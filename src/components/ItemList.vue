@@ -15,6 +15,8 @@ const newItemPrice = ref(0)
 
 const addItem = () => {
   items.value.push({ name: newItemName.value, price: newItemPrice.value })
+  newItemName.value=''
+  newItemPrice.value=0
 }
 </script>
 
@@ -37,7 +39,7 @@ const addItem = () => {
         価格
         <input v-model="newItemPrice" type="number" />
       </label>
-      <button v-if="newItemName!=''" @click="addItem(); newItemName=''; newItemPrice=0">追加</button>
+      <button v-if="newItemName!=''" @click="addItem()">追加</button>
       <button v-else>追加</button>
     </div>
   </div>
