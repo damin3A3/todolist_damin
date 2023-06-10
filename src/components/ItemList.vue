@@ -36,7 +36,7 @@ const addItem = () => {
         価格
         <input v-model="newItemPrice" type="number" />
       </label>
-      <button @click="addItem">追加</button>
+      <button @click="addItem(); newItemName=''; newItemPrice=0">追加</button>
     </div>
   </div>
 </template>
